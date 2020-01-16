@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link
+        href="//fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic|Bitter:400,400italic,700|Oxygen:400,700"
+        rel="stylesheet" type="text/css">
+    <link href="https://www.vozpopuli.com/static/BB3HTML/css/vozpopuli.min.css?hash=0044962a05885c6ba139b7ae0a0d9a95"
+        rel="stylesheet" type="text/css">
+    <title>calculadora</title>
+    <link href="/static/css/app.371c90797d4983f8a78729eeaff1dc8a.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <div class="row-x70-30 release-container">
+            <div class="col-x70">
+                <div class="datos">
+                    <div class="datosrequeridos">
+                        <form>
+                            <div class="field level"><label class="field-label has-text-grey is-size-6">*¿Cómo vas a
+                                    alquilar la casa?</label>
+                                <div class="field-body control has-icons-left">
+                                    <div class="select"><select name="agencia" aria-required="true"
+                                            aria-invalid="false">
+                                            <option value="A">Agencia</option>
+                                            <option value="B">Particular</option>
+                                        </select> <span class="icon is-small is-left"><i></i></span></div>
+                                </div>
+                            </div>
+                            <!---->
+                            <div class="field level"><label for="" class="field-label has-text-grey is-size-6">*¿Cuánto
+                                    pagarás de fianza?</label>
+                                <div class="field-body control has-icon"><input type="number" name="fianza"
+                                        placeholder="1000€" class="input" aria-required="true" aria-invalid="false">
+                                    <span class="icon is-small is-right"><i class="fas fa-euro-sign"></i></span></div>
+                            </div>
+                            <div class="field level"><label for="" class="field-label has-text-grey is-size-6">*Precio
+                                    de alquiler mensual del piso</label>
+                                <div class="field-body control has-icon"><input type="number" name="alquiler"
+                                        placeholder="1500€" class="input input" aria-required="true"
+                                        aria-invalid="false"> <span class="icon is-small is-left"><i
+                                            class="fas fa-home"></i></span></div>
+                            </div>
+                            <div class="field level"><label for="" class="field-label has-text-grey is-size-6">*Mi
+                                    sueldo neto al mes es de <a target="_blank"
+                                        href="https://www.vozpopuli.com/calculadoras/sueldo-neto.html"
+                                        style="font-size: 10px;">(Calcular)</a></label>
+                                <div class="field-body control has-icon"><input name="sueldo" type="number"
+                                        placeholder="¿Cuánto cobras?" class="input" aria-required="true"
+                                        aria-invalid="false"> <span class="icon is-small is-left"><i
+                                            class="fas fa-euro-sign"></i></span></div>
+                            </div>
+                            <div class="field level"><label for="dineroahorradosi"
+                                    class="field-label has-text-grey is-size-6">¿Quieres utilizar tus ahorros?</label>
+                                <div class="field-body control has-icons-left"><label class="switch"><input
+                                            type="checkbox" id="dineroahorrado" name="dineroahorrado"
+                                            class="is-checkradio"> <span class="slider round"></span></label> <label
+                                        for="movilidad" class="radio">
+                                        <p>No</p>
+                                        <!---->
+                                    </label></div>
+                            </div>
+                            <!---->
+                            <div class="field level"><label for="" class="field-label has-text-grey is-size-6">*¿Qué
+                                    gastos fijos mensuales tienes?</label>
+                                <div class="field-body control has-icon"><input name="gastos" type="number"
+                                        placeholder="200€" class="input" aria-required="true" aria-invalid="false">
+                                    <span class="icon is-small is-left"><i class="fas fa-euro-sign"></i></span></div>
+                            </div>
+                            <div class="field level"><label for="" class="field-label has-text-grey is-size-6">*¿Cuánto
+                                    dinero te gustaría ahorrar al mes?</label>
+                                <div class="field-body control has-icon"><input type="number" name="ahorrar"
+                                        placeholder="100€" class="input" aria-required="true" aria-invalid="false">
+                                    <span class="icon is-small is-left"><i class="fas fa-euro-sign"></i></span></div>
+                            </div>
+                            <div class="field level"><label class="field-label has-text-grey is-size-6">*¿Con cuantas
+                                    personas aparte de ti compartes piso? <i title="Sin incluirte"
+                                        class="fas fa-question-circle"></i></label>
+                                <div class="field-body control has-icon incluir"><input type="number"
+                                        name="inquilinos.numero_personas" id="num_personas" placeholder="Sin incluirte"
+                                        class="input" aria-required="true" aria-invalid="false"> <span
+                                        class="icon is-small is-left"><i class="fas fa-users"></i></span>
+                                    <div class="control"><span
+                                            class="button is-dark añadir animated pulse is-success">Añadir</span></div>
+                                </div>
+                            </div>
+                            <div id="c2a" class="level">
+                                <div class="field-label has-text-grey is-size-6">
+                                    <p class="help is-7 has-text-grey">* Campo requerido</p>
+                                    <p class="help is-7 has-text-grey">Vozpópuli declina toda responsabilidad sobre el
+                                        uso de los cálculos realizados.</p>
+                                </div>
+                                <div class="level-right">
+                                    <div class="field-body control has-icon"><button type="submit"
+                                            class="button is-large is-success is-expanded is-fullwidth">Calcular</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div> <br>
+                </div>
+            </div>
+            <div class="col-x30">
+                <!---->
+                <!---->
+                <div id="ad_521792040" class="ad-holder ad-320x200 ad-dfp">
+                    <div id="bbt-ad-slot-Right1" class="ad bbt-adv-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/static/js/manifest.2ae2e69a05c33dfc65f8.js"></script>
+    <script type="text/javascript" src="/static/js/vendor.572cb177a4d3685843a1.js"></script>
+    <script type="text/javascript" src="/static/js/app.7b1c015ca0dc6904c629.js"></script>
+</body>
+
+</html>
